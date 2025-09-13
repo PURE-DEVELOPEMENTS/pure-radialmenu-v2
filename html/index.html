@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="wheelMenu" class="wheel-menu">
+      <svg width="800" height="800" viewBox="0 0 800 800">
+        <defs></defs>
+
+        <!-- Background wheel images -->
+        <g id="wheelBackground">
+          <image
+            class="outer-ring"
+            x="65"
+            y="65"
+            width="670"
+            height="670"
+            href="./icons/ui/bgwheelouter.png"
+          ></image>
+          <image
+            class="center-circle"
+            x="235"
+            y="235"
+            width="330"
+            height="330"
+            href="./icons/ui/bgcenter.png"
+          ></image>
+        </g>
+
+        <!-- Menu items layer -->
+        <g id="menuItems"></g>
+
+        <!-- Center logo -->
+        <image
+          id="centerLogo"
+          x="270"
+          y="270"
+          width="260"
+          height="260"
+          href="./icons/PureLogo.png"
+          class="center-logo"
+        ></image>
+
+        <!-- Brush effects layer - last to be on top -->
+        <g id="brushGroup"></g>
+      </svg>
+    </div>
+    <script src="config.js"></script>
+    <script src="menu.js"></script>
+  </body>
+</html>

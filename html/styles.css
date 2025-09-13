@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: "Arial", sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+.wheel-menu {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    display: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#wheelBackground {
+    z-index: 1;
+}
+
+#menuItems {
+    z-index: 2;
+}
+
+#centerLogo {
+    z-index: 3;
+    pointer-events: none;
+}
+
+#brushGroup {
+    z-index: 9999;
+    pointer-events: none;
+    position: relative;
+}
+
+.highlight-container {
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    position: relative;
+    z-index: 9999;
+}
+
+.brush-stroke {
+    pointer-events: none;
+    mix-blend-mode: normal;
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+.menu-item-bg {
+    fill: transparent;
+    stroke: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover .menu-item-bg {
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item-icon {
+    opacity: 0.9;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-item:hover .menu-item-icon {
+    opacity: 1;
+}
+
+.menu-item-label {
+    pointer-events: none;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    fill: white;
+    font-size: 14px;
+    dominant-baseline: hanging;
+}
+
+.outer-ring {
+    opacity: 0.95;
+}
+
+.center-circle {
+    opacity: 0.98;
+}
+
+.center-logo {
+    opacity: 0.9;
+}
